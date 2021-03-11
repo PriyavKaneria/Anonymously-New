@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Access Granted</title>
+	<link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/access_granted.css"/>
+	<link rel="stylesheet" type="text/css" href="css/timer.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/count_click.js"></script>
+</head>
+<body>
+	<div class="bg">
+	</div>
+	<div class="container">
+		<span></span>
+		<span></span>
+		<span></span>
+		<div class="box">
+			<h2>Access Granted</h2>
+			<input type="formula" name="formula" id="ans" placeholder="a!+d*c%b+e/f"><br><br><br>
+			<button id="submit">Submit</button>
+		</div>
+	</div>
+	<div id="overlay" class="modal-overlay"></div>
+	<div id="click-me" class="modal click-me">
+		<!-- <span class="close">&times;</span> -->
+		<div class="reloadDouble"></div>
+		<div class="click-me-keys front">
+			<div class="count">TOTAL COUNT :</div>
+			<div id="counter" class="count">0</div>
+			<div class='wrapper'>
+			  <div class='time-part-wrapper'>
+			    <div class='time-part minutes ones'>
+			      <div class='digit-wrapper'>
+			        <span class='digit'>0</span>
+			      </div>
+			    </div>
+			  </div>
+			  <div class='time-part-wrapper'>
+			    <div class='time-part seconds tens'>
+			      <div id="secten" class='digit-wrapper'>
+			        <span class='digit'>0</span>
+			        <span class='digit'>1</span>
+			        <span class='digit'>0</span>
+			        <span class='digit'>0</span>
+			      </div>
+			    </div>
+			    <div class='time-part seconds ones'>
+			      <div id="secone" class='digit-wrapper'>
+			        <span class='digit'>0</span>
+			        <span class='digit'>9</span>
+			        <span class='digit'>8</span>
+			        <span class='digit'>7</span>
+			        <span class='digit'>6</span>
+			        <span class='digit'>5</span>
+			        <span class='digit'>4</span>
+			        <span class='digit'>3</span>
+			        <span class='digit'>2</span>
+			        <span class='digit'>1</span>
+			        <span class='digit'>0</span>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<button id="button1" type="button" onclick="addcount(this.id)"></button>
+			<button id="button2" type="button" onclick="addcount(this.id)"></button>
+			<button id="button3" type="button" onclick="addcount(this.id)"></button>
+			<button id="button4" type="button" onclick="addcount(this.id)"></button>
+			<button id="button5" type="button" onclick="addcount(this.id)"></button>
+			<button id="button6" type="button" onclick="addcount(this.id)"></button>
+			<button id="button7" type="button" onclick="addcount(this.id)"></button>
+			<button id="button8" type="button" onclick="addcount(this.id)"></button>
+			<button id="button9" type="button" onclick="addcount(this.id)"></button>
+			<div id="hint1" class="hint" hidden>
+				<span>Try Harder ...</span>
+			</div>
+			<div id="hint2" class="hint" hidden>
+				<span>'Stop</span>
+			</div>
+			<div id="hint3" class="hint" hidden>
+				<span>Timer()'</span>
+			</div>
+		</div>
+		<div id="back" class="back" hidden>
+			<h1>Afwl "leayhja" mbujapvu pu jvuzvsl: 7</h1>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/click_me.js"></script>
+</html>

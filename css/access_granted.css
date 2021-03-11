@@ -1,0 +1,179 @@
+html {
+	height: 100vh;
+}
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: 'Aldrich'
+}
+.bg {
+	width: 100%;
+	height: 100%;
+	background-image: url("../imgs/abc.gif");
+	background-size: 100vw 100vh;
+	background-attachment: fixed;
+	/*filter: blur(1px);*/
+}
+
+.container {
+	position: absolute;
+	top: 25vh;
+	left: 35vw;
+	width: 30vw;
+	min-width: 233px;
+	height: 35vh;
+	min-height: 222px;
+	text-align: center;
+	background: black;
+	opacity: 60%;
+	padding: 20px;
+}
+
+.box {
+	position: relative;
+	top: 5vh;
+	color: white;
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 3; /* Sit on top */
+	left: 30vw;
+	top: 20vh;
+	overflow: auto; /* Enable scroll if needed */
+	width: 40vw;
+}
+
+.modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 60%;
+	z-index: 2;
+	height: 100vh;
+	width: 100vw;
+	background-color: #505050;
+}
+
+.click-me {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: black;
+	align-content: center;
+	transition: transform 0.5s ease-out 0s;
+}
+
+.click-me-keys {
+	display: grid;
+	position: relative;
+	top: -5%;
+	white-space: nowrap;
+	grid-template-columns: 33.33% 33.33% 33.33%;
+	grid-template-rows: 1.5fr 1fr 1fr 1fr;
+	padding: 10% 10% 10% 10%;
+	text-align: center;
+	color: white;
+}
+
+.count {
+	position: relative;
+	font-size: 1.4rem;
+}
+
+button {
+	height: 60px;
+	width: 170px;
+	background-color: black;
+	border-radius: 0px;
+	border: 1px solid #c4c4c4;
+	background-color: transparent;
+	font-size: 1rem;
+	color: yellow;
+	text-shadow: 0 1px rgba(255,255,255,.4);
+	font-family: 'Aldrich';
+}
+
+button:hover {
+	background-color: #202020;
+}
+
+.back {
+	color: white;
+	text-align: center;
+	transition: transform 0.5s ease-out 0s;
+}
+
+.hint {
+	margin-top: 20px;
+	color: #7CFC00;
+}
+
+.reloadDouble:hover {
+  -webkit-animation: rotate .5s linear 1;
+  animation: rotate .5s linear 1;
+}
+
+.reloadDouble {
+  border-color: transparent red;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: .125em;
+  height: 1.5em;
+  margin: .25em;
+  width: 1.5em;
+  display: none;
+  position: relative;
+  left: 90%;
+  margin-top: 5%;
+}
+.reloadDouble:before, .reloadDouble:after {
+  border-style: solid;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.reloadDouble:after {
+  border-color: transparent transparent transparent red;
+  border-width: .3125em 0 .3125em .5em;
+  top: -.3125em;
+  left: .0625em;
+}
+.reloadDouble:before {
+  border-color: transparent red transparent transparent;
+  border-width: .3125em .5em .3125em 0;
+  bottom: -.3125em;
+  right: .0625em;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* The Close Button */
+/*.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	padding-right: 2%;
+}
+
+.close:hover,
+.close:focus {
+	color: red;
+	text-decoration: none;
+	cursor: pointer;
+}*/

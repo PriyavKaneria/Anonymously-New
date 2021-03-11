@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Anonymously New</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/intro.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  	<div class="heading" data-aos="fade-up">
+		<h1 style="font-family: 'Grenze Gotisch', cursive;font-size: 50px;">Welcome to the "ANONYMOUSLY NEW" CryptoProject</h1>
+	</div>
+	<a href="access_key.html"><img data-aos="fade" src="./imgs/track.png" style="position: absolute;width: 85vw;height: 90vh;top: 10vh;left: 8vw;"></a>
+	<img data-aos="fade" data-aos-delay="100" id="but1" src="./imgs/flag.png" style="position: absolute;top: 55vh;left: 22vw;height: 100px;">
+	<img data-aos="fade" id="desc1" src="./imgs/level1.png" style="position: absolute;top: 38vh;left: 5vw;width: 300px;opacity: 0%;">
+	<img data-aos="fade" data-aos-delay="200" id="but2" src="./imgs/flag.png" style="position: absolute;top: 55vh;left: 45vw;height: 100px;">
+	<img data-aos="fade" id="desc2" src="./imgs/level2.png" style="position: absolute;top: 65vh;left: 50vw;width: 300px;opacity: 0%;">
+	<img data-aos="fade" data-aos-delay="300" id="but3" src="./imgs/flag.png" style="position: absolute;top: 18vh;left: 58vw;height: 100px;">
+	<img data-aos="fade" id="desc3" src="./imgs/level3.png" style="position: absolute;top: 28vh;left: 62vw;width: 300px;opacity: 0%;">
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript">
+	AOS.init();
+	var count1=-1;
+	var count2=-1;
+	var count3=-1;
+	$("#but1").click(function () {
+		if (count1%2) {
+			$("#desc1").animate({opacity: '100%'});
+		}
+		else{
+			$("#desc1").animate({opacity: '0%'});
+		}
+		count1++;
+	});
+	$("#but2").click(function () {
+		if (count2%2) {
+			$("#desc2").animate({opacity: '100%'});
+		}
+		else{
+			$("#desc2").animate({opacity: '0%'});
+		}
+		count2++;
+	});
+	$("#but3").click(function () {
+		if (count3%2) {
+			$("#desc3").animate({opacity: '100%'});
+		}
+		else{
+			$("#desc3").animate({opacity: '0%'});
+		}
+		count3++;
+	});
+</script>
+</html>

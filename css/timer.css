@@ -1,0 +1,99 @@
+/* Play with speed and easing of the animation */
+/* =========================================== */
+.digit {
+  display: inline-block;
+  font-size: 26px;
+  color: white;
+  height: 18px;
+  line-height: 1;
+}
+
+.time-part-wrapper {
+  display: inline-block;
+  margin-right: 50px;
+  position: relative;
+}
+.time-part-wrapper:not(:last-child):after {
+  content: ":";
+  display: block;
+  width: 26px;
+  height: 18px;
+  position: absolute;
+  top: 5px;
+  right: -30px;
+  color: white;
+  font-size: 16px;
+  line-height: 0.9;
+}
+
+.time-part {
+  width: 20px;
+  text-align: center;
+  height: 26px;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: -5px;
+  box-sizing: border-box;
+}
+.time-part .digit-wrapper {
+  animation-timing-function: cubic-bezier(1, 0, 1, 0);
+}
+.time-part.seconds.tens .digit-wrapper {
+  animation-name: seconds-tens;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+}
+.time-part.seconds.ones .digit-wrapper {
+  animation-name: seconds-ones;
+  animation-duration: 10s;
+  animation-iteration-count: 2;
+}
+@keyframes seconds-tens {
+  0% {
+    transform: translateY(-26px);
+  }
+  100% {
+    transform: translateY(-52px);
+  }
+}
+@keyframes seconds-ones {
+  0% {
+    transform: translateY(-26px);
+  }
+  10% {
+    transform: translateY(-52px);
+  }
+  20% {
+    transform: translateY(-78px);
+  }
+  30% {
+    transform: translateY(-104px);
+  }
+  40% {
+    transform: translateY(-130px);
+  }
+  50% {
+    transform: translateY(-156px);
+  }
+  60% {
+    transform: translateY(-182px);
+  }
+  70% {
+    transform: translateY(-208px);
+  }
+  80% {
+    transform: translateY(-234px);
+  }
+  90% {
+    transform: translateY(-260px);
+  }
+}
+
+.wrapper {
+    margin-top: 2px;
+    white-space: normal;
+}
+
+.notransition {
+    animation: none !important;
+}
