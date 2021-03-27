@@ -17,7 +17,7 @@ var text = [
 // When the user clicks the button, open the modal 
 
 btn.onclick = function() {
-	if ($("#ans").val()==6) {
+	if ($("#ans").val()==7) {
 		alert('Thats Great! You have proved yourself...\nNow score 10 points for the next stage\nAll The Best!');
 		modal.style.display = "block";
 		modaloverlay.style.display = "block";
