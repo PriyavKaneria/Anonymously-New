@@ -1,16 +1,30 @@
 $("#form").submit(function (e) {
-	if ($("#answer").val() == "") {
+	let userAnswer = $("#answer").val();
+	// call to api https://api.hashify.net/hash/md5/hex?value=knowledge
+	if (userAnswer == "") {
 		alert("Enter a valid Cipher!");
 		e.preventDefault();
-	}
-	else if ($("#answer").val() == String.fromCharCode(947) + String.fromCharCode(957) + String.fromCharCode(974) + String.fromCharCode(963) + String.fromCharCode(951)) {
+	} else if (userAnswer == String.fromCharCode(947) + String.fromCharCode(957) + String.fromCharCode(974) + String.fromCharCode(963) + String.fromCharCode(951)) {
 		alert("Umm...Close enough :o");
 		e.preventDefault();
 	}
-	else if ($("#answer").val() != "knowledge") {
-		alert("Inspection is the key");
-		e.preventDefault();
-	}
-	else
-		alert("Go0d job :thumbsup: 3asy enough!\nPu1l <up arrow> your sOcK8 4 de Next 1");
-});
+	else {
+		$.ajax({
+			url: "https://api.hashify.net/hash/md5/hex?value=" + userAnswer,
+			type: "GET",
+			dataType: "json",
+			success: function (data) {
+				if (data["Digest"] != "a542e9b744bedcfd874129ab0f98c4ff") {
+					// wrong answer
+					$("#answer").val("");
+					$("#answer").attr("placeholder", "Wrong answer");
+					$("#answer").focus();
+					alert("Inspection is the key");
+					e.preventDefault();
+				} else {
+					// correct answer
+					alert("Go0d job :thumbsup: 3asy enough!\nPu1l <up arrow> your sOcK8 4 de Next 1");
+				}
+			}
+		});
+	}});
