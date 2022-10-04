@@ -59,8 +59,8 @@ body {
 
 .click-me {
 	border: 1px solid #ccc;
-	border-radius: 5px;
-	background-color: black;
+	border-radius: 15px;
+	background-color: rgb(37, 34, 34);
 	align-content: center;
 	transition: transform 0.5s ease-out 0s;
 }
@@ -86,17 +86,18 @@ button {
 	height: 60px;
 	width: 170px;
 	background-color: black;
-	border-radius: 0px;
-	border: 1px solid #c4c4c4;
+	border-radius: 15px;
+	border: 1px solid #389e3d;
 	background-color: transparent;
 	font-size: 1rem;
 	color: yellow;
 	text-shadow: 0 1px rgba(255,255,255,.4);
 	font-family: 'Aldrich';
+	margin-bottom: 15px;
 }
 
 button:hover {
-	background-color: #202020;
+	background-color: #389e3d;
 }
 
 .back {
@@ -107,7 +108,7 @@ button:hover {
 
 .hint {
 	margin-top: 20px;
-	color: #7CFC00;
+	color: #f400fc;
 }
 
 .reloadDouble:hover {

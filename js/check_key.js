@@ -1,6 +1,5 @@
 $("#form").submit(function (e) {
 	let userAnswer = $("#answer").val();
-	// call to api https://api.hashify.net/hash/md5/hex?value=knowledge
 	if (userAnswer == "") {
 		alert("Enter a valid Cipher!");
 		e.preventDefault();
