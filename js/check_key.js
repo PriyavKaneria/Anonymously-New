@@ -21,10 +21,10 @@ $("#form").submit(function (e) {
 			} else {
 				// correct answer
 				$("#answer").val("");
-				$("#answer").attr("placeholder", "Go to /access_granted.html?answer=s&submit=");
+				$("#answer").attr("placeholder", "I always knew you were smart");
 				$("#answer").focus();
-				alert("Go0d job :thumbsup: 3asy enough!\nPu1l <up arrow> your sOcK8 4 de Next 1");
-				console.log("Go0d job :thumbsup: 3asy enough!\nPu1l <up arrow> your sOcK8 4 de Next 1");
+				alert("Go0d job 🚀 The legend has it that those who get wrong answer here are the ones who are destined to be the next great hackers 😉");
+				console.log("Go0d job 🚀 The legend has it that those who get wrong answer here are the ones who are destined to be the next great hackers 😉");
 				console.log("Go to /access_granted.html?answer=s&submit=");
 			}
 		});
